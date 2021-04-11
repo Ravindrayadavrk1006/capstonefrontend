@@ -31,7 +31,7 @@ export default function Footer() {
 
             <div className="copyright">
                 <CopyrightIcon style={styles.smallIcon} /> 
-                <p>{`${year.getFullYear()}, kashkart.in`}</p>
+                <p>{`${year.getFullYear()}, ravindra and his team`}</p>
                 <a href="https://github.com/iamhiman/kashkart" target="_blank" rel="noreferrer" ><GitHubIcon /></a>
             </div> 
         </footer>
