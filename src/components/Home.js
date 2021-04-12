@@ -31,6 +31,9 @@ export default function Home() {
 
             <div className="features">
                 <div className="features-card">
+                    <Link to="sellerDashboard">Dashboard</Link>
+                </div>
+                <div className="features-card">
                     <p className="features-head"><ShippingIcon style={styles.largeIcon} /> Free Home Delivery</p>
                     <p className="features-para">No shipping Charges on Orders above &#8377; 500.</p>
                 </div>
