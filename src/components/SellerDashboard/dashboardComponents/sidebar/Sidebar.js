@@ -1,6 +1,6 @@
 import "./Sidebar.css";
 import logo from "../../assets/logo.png";
-
+import {Link} from 'react-router-dom';
 const Sidebar = ({ sidebarOpen, closeSidebar }) => {
   return (
     <div className={sidebarOpen ? 'sidebar_responsive' : ''} id='sidebar'>
@@ -50,8 +50,10 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
           <a href='#'>Requests</a>
         </div>
         <div className='sidebar__link'>
-          <i className='fa fa-sign-out'></i>
-          <a href='#'>Add New Product</a>
+          <Link to='/addProduct'>
+            <i className='fa fa-sign-out'></i>
+            <a href='#'>Add New Product</a>
+          </Link>
         </div>
         <div className='sidebar__link'>
           <i className='fa fa-calendar-check-o'></i>
