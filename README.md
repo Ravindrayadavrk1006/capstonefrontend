@@ -1,4 +1,4 @@
-<h1 align="center"> :shopping_cart: kashkart :shopping: </h1>
+<h1 align="center">Art World</h1>
 
 <p align="center">
 	<img src="https://img.shields.io/badge/Platform-Web-brightgreen" alt="Platform-Web">
@@ -7,8 +7,6 @@
     <img src="https://img.shields.io/badge/Automation%20Tool-Gulp-%23FF1493" alt="Automation">
 </p>
 
-<h2 align="center">Built with React JS :atom: at core.</h2>
-<h2 align="center"><a href="https://kashkart.netlify.app/"> Live Site </a></h2>
 
 
 ## :bookmark_tabs: Introduction 
