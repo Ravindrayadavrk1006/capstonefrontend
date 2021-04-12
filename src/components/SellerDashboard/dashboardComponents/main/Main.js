@@ -72,9 +72,9 @@ const Main = () => {
             <div className='charts__left__title'>
               <div>
                 <h1>Daily Reports</h1>
-                <p>Cupertino, California, USA</p>
+                <p>RupNagar, Delhi, India</p>
               </div>
-              <i className='fa fa-usd' aria-hidden='true'></i>
+              <i className='fa fa-inr' aria-hidden='true'></i>
             </div>
             <Chart />
           </div>
@@ -83,20 +83,20 @@ const Main = () => {
             <div className='charts__right__title'>
               <div>
                 <h1>Stats Reports</h1>
-                <p>Cupertino, California, USA</p>
+                <p>RupNagar, Delhi, India</p>
               </div>
-              <i className='fa fa-usd' aria-hidden='true'></i>
+              <i className='fa fa-inr' aria-hidden='true'></i>
             </div>
 
             <div className='charts__right__cards'>
               <div className='card1'>
                 <h1>Income</h1>
-                <p>$75,300</p>
+                <p>&#x20B9; 75,300</p>
               </div>
 
               <div className='card2'>
                 <h1>Sales</h1>
-                <p>$124,200</p>
+                <p>&#x20B9; 124,200</p>
               </div>
 
               <div className='card3'>
@@ -113,130 +113,86 @@ const Main = () => {
         </div>
 
         {/* showing all products */}
-        <h2 style={{textAlign:center}} className="allProducts">All Products</h2>
+        <h2 style={{ textAlign: 'center' }} className='allProducts'>
+          All Products
+        </h2>
 
         <div class='list-group'>
-          <div className="row">
-            <div className="col"> <img src="" alt=""/> </div>
-            <div className="col">Product</div>
-            <div className="col">Sale</div>
-          </div>
-          <a href='#' class='list-group-item list-group-item-action active'>
-            Cras justo odio
+          <a href='#' class='list-group-item list-group-item-action'>
+            <div style={{ textAlign: 'center' }} className='row'>
+              <div style={{ fontWeight: 'bold' }} className='col-4'>
+                Image
+              </div>
+              <div style={{ fontWeight: 'bold' }} className='col-4'>
+                Name
+              </div>
+              <div style={{ fontWeight: 'bold' }} className='col-2'>
+                price
+              </div>
+              <div style={{ fontWeight: 'bold' }} className='col-2'>
+                total earning
+              </div>
+            </div>
           </a>
           <a href='#' class='list-group-item list-group-item-action'>
-            Dapibus ac facilisis in
+            <div style={{ textAlign: 'center' }} className='row'>
+              <div className='col-4'>
+                {' '}
+                <img
+                  style={{ height: '50px', width: '50px' }}
+                  src='bg.png'
+                  alt=''
+                />{' '}
+              </div>
+              <div className='col-4'>Shiva Painting</div>
+              <div className='col-2'>&#x20B9; 50</div>
+              <div className='col-2'>500000</div>
+            </div>
           </a>
           <a href='#' class='list-group-item list-group-item-action'>
-            Morbi leo risus
+            <div style={{ textAlign: 'center' }} className='row'>
+              <div className='col-4'>
+                {' '}
+                <img
+                  style={{ height: '50px', width: '50px' }}
+                  src='bg.png'
+                  alt=''
+                />{' '}
+              </div>
+              <div className='col-4'>Shiva Painting</div>
+              <div className='col-2'>&#x20B9; 50</div>
+              <div className='col-2'>500000</div>
+            </div>
           </a>
           <a href='#' class='list-group-item list-group-item-action'>
-            Porta ac consectetur ac
-          </a>
-          <a href='#' class='list-group-item list-group-item-action disabled'>
-            Vestibulum at eros
-          </a>
-        </div>
-        <div class='list-group'>
-          <a href='#' class='list-group-item list-group-item-action active'>
-            Cras justo odio
-          </a>
-          <a href='#' class='list-group-item list-group-item-action'>
-            Dapibus ac facilisis in
-          </a>
-          <a href='#' class='list-group-item list-group-item-action'>
-            Morbi leo risus
+            <div style={{ textAlign: 'center' }} className='row'>
+              <div className='col-4'>
+                {' '}
+                <img
+                  style={{ height: '50px', width: '50px' }}
+                  src='bg.png'
+                  alt=''
+                />{' '}
+              </div>
+              <div className='col-4'>Shiva Painting</div>
+              <div className='col-2'>&#x20B9; 50</div>
+              <div className='col-2'>500000</div>
+            </div>
           </a>
           <a href='#' class='list-group-item list-group-item-action'>
-            Porta ac consectetur ac
-          </a>
-          <a href='#' class='list-group-item list-group-item-action disabled'>
-            Vestibulum at eros
-          </a>
-        </div>
-        <div class='list-group'>
-          <a href='#' class='list-group-item list-group-item-action active'>
-            Cras justo odio
-          </a>
-          <a href='#' class='list-group-item list-group-item-action'>
-            Dapibus ac facilisis in
-          </a>
-          <a href='#' class='list-group-item list-group-item-action'>
-            Morbi leo risus
-          </a>
-          <a href='#' class='list-group-item list-group-item-action'>
-            Porta ac consectetur ac
-          </a>
-          <a href='#' class='list-group-item list-group-item-action disabled'>
-            Vestibulum at eros
-          </a>
-        </div>
-        <div class='list-group'>
-          <a href='#' class='list-group-item list-group-item-action active'>
-            Cras justo odio
-          </a>
-          <a href='#' class='list-group-item list-group-item-action'>
-            Dapibus ac facilisis in
-          </a>
-          <a href='#' class='list-group-item list-group-item-action'>
-            Morbi leo risus
-          </a>
-          <a href='#' class='list-group-item list-group-item-action'>
-            Porta ac consectetur ac
-          </a>
-          <a href='#' class='list-group-item list-group-item-action disabled'>
-            Vestibulum at eros
-          </a>
-        </div>
-        <div class='list-group'>
-          <a href='#' class='list-group-item list-group-item-action active'>
-            Cras justo odio
-          </a>
-          <a href='#' class='list-group-item list-group-item-action'>
-            Dapibus ac facilisis in
-          </a>
-          <a href='#' class='list-group-item list-group-item-action'>
-            Morbi leo risus
-          </a>
-          <a href='#' class='list-group-item list-group-item-action'>
-            Porta ac consectetur ac
-          </a>
-          <a href='#' class='list-group-item list-group-item-action disabled'>
-            Vestibulum at eros
-          </a>
-        </div>
-        <div class='list-group'>
-          <a href='#' class='list-group-item list-group-item-action active'>
-            Cras justo odio
-          </a>
-          <a href='#' class='list-group-item list-group-item-action'>
-            Dapibus ac facilisis in
-          </a>
-          <a href='#' class='list-group-item list-group-item-action'>
-            Morbi leo risus
-          </a>
-          <a href='#' class='list-group-item list-group-item-action'>
-            Porta ac consectetur ac
-          </a>
-          <a href='#' class='list-group-item list-group-item-action disabled'>
-            Vestibulum at eros
-          </a>
-        </div>
-        <div class='list-group'>
-          <a href='#' class='list-group-item list-group-item-action active'>
-            Cras justo odio
-          </a>
-          <a href='#' class='list-group-item list-group-item-action'>
-            Dapibus ac facilisis in
-          </a>
-          <a href='#' class='list-group-item list-group-item-action'>
-            Morbi leo risus
-          </a>
-          <a href='#' class='list-group-item list-group-item-action'>
-            Porta ac consectetur ac
-          </a>
-          <a href='#' class='list-group-item list-group-item-action disabled'>
-            Vestibulum at eros
+            <div style={{ textAlign: 'center' }} className='row'>
+              <div className='col-4'>
+                {' '}
+                <img
+                  style={{ height: '50px', width: '50px' }}
+                  src='bg.png'
+                  alt=''
+                />{' '}
+              </div>
+              <div className='col-4'>Shiva Painting</div>
+              <div className='col-2'>&#x20B9; 50</div>
+              <div className='col-2'>500000</div>
+            </div>
           </a>
         </div>
         {/* <!-- CHARTS ENDS HERE --> */}
