@@ -10,7 +10,7 @@ const BaseSignUpSignInPage = () => {
         backgroundSize: '',
       }}
     >
-      <div style={{marginTop:"12vh"}} className='container'>
+      <div style={{ marginTop: '12vh' }} className='container'>
         <div className='row'>
           <div className='col-4'>
             <div
@@ -24,17 +24,24 @@ const BaseSignUpSignInPage = () => {
             >
               {/* <img className='card-img-top' src='...' alt='Card image cap' /> */}
               <div className='card-body'>
-                <h2 className='card-title'>SignUp/Sign</h2>
+                <h2 className='card-title'>SignUp/SignIn</h2>
                 <h3 style={{ marginTop: '5rem' }} className='card-text'>
                   Buyer
                 </h3>
-                <a
+                {/* <button
                   style={{ marginTop: '5rem' }}
                   href='#'
                   className='btn btn-primary'
+                > */}
+                <Link
+                  style={{ marginTop: '5rem' }}
+                  href='#'
+                  className='btn btn-primary'
+                  to='registerBuyer'
                 >
-                  <Link to='registerBuyer'>SignUp</Link>
-                </a>
+                  SignUp/SignIn
+                </Link>
+                {/* </button> */}
               </div>
             </div>
           </div>
@@ -50,17 +57,24 @@ const BaseSignUpSignInPage = () => {
             >
               {/* <img className='card-img-top' src='...' alt='Card image cap' /> */}
               <div className='card-body'>
-                <h2 className='card-title'>SignUp/Sign</h2>
+                <h2 className='card-title'>SignUp/SignIn</h2>
                 <h3 style={{ marginTop: '5rem' }} className='card-text'>
                   Seller
                 </h3>
-                <a
+                {/* <button
                   style={{ marginTop: '5rem' }}
                   href='#'
                   className='btn btn-primary'
+                > */}
+                <Link
+                  style={{ marginTop: '5rem' }}
+                  href='#'
+                  className='btn btn-primary'
+                  to='registerSeller'
                 >
-                  <Link to='registerSeller'>SignUp</Link>
-                </a>
+                  SignUp/SignIn
+                </Link>
+                {/* </button> */}
               </div>
             </div>
           </div>
@@ -76,17 +90,24 @@ const BaseSignUpSignInPage = () => {
             >
               {/* <img className='card-img-top' src='...' alt='Card image cap' /> */}
               <div className='card-body'>
-                <h2 className='card-title'>SignUp/Sign</h2>
+                <h2 className='card-title'>SignUp/SignIn</h2>
                 <h3 style={{ marginTop: '5rem' }} className='card-text'>
                   Educator
                 </h3>
-                <a
+                {/* <button
                   style={{ marginTop: '5rem' }}
                   href='#'
                   className='btn btn-primary'
-                >
-                  <Link to='registerEducator'>SignUp</Link>
-                </a>
+                > */}
+                  <Link
+                    style={{ marginTop: '5rem' }}
+                    href='#'
+                    className='btn btn-primary'
+                    to='registerEducator'
+                  >
+                    SignUp/SignIn
+                  </Link>
+                {/* </button> */}
               </div>
             </div>
           </div>

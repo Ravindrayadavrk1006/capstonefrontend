@@ -8,13 +8,17 @@ const AddProduct = () => {
      description: '',
      highlights:'',
      specifications:'',
-     categories:''
+     categories:[]
    })
   //  const [errors, setErrors] = useState({})
   //  const [isSubmitting, setIsSubmitting] = useState(false)
 
    const handleInput = (event) => {
      const { name, value } = event.target
+    //  if(name==categories)
+    //  {
+
+    //  }
      setValues({
        ...values,
        [name]: value,
@@ -22,6 +26,7 @@ const AddProduct = () => {
    }
   const handleSubmit = (event) => {
          event.preventDefault()
+         console.log(values);
        }
 
  return (
@@ -52,11 +57,13 @@ const AddProduct = () => {
        </div>
 
        <div class='form-group'>
-         <label Htmlfor='category'>Example select</label>
+         <label Htmlfor='categories'>Example select</label>
          <select
            class='form-control'
-           id='category'
-           onChange={handleInput}
+           id='categories'
+           name='categories'
+           data-live-search='true'
+           onChange={handleInput.bind(this)}
            value={values.categories}
          >
            <option>pottery</option>

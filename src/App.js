@@ -15,8 +15,10 @@ import RegisterEducator from './components/Signup/RegisterEducator';
 import RegisterBuyer from './components/Signup/RegisterBuyer';
 import RegisterSeller from './components/Signup/RegisterSeller';
 import SignIn from './components/SignIn';
+import SignInBuyer from './components/SignInBuyer'
+import SignInEducator from './components/SignInEducator'
 import SellerDashboard from './components/SellerDashboardPage';
-import AddProduct from './addProduct/AddProduct';
+import AddProduct from './components/addProduct/AddProduct';
 function App() {
   const [search, setSearch] = useState('')
 
@@ -56,12 +58,10 @@ function App() {
                 path='/sellerDashboard'
                 component={SellerDashboard}
               />
-              <Route
-                exact
-                path='/addProduct'
-                component={AddProduct}
-              />
-              <Route exact path='/signIn' component={SignIn} />
+              <Route exact path='/addProduct' component={AddProduct} />
+              <Route exact path='/signInSeller' component={SignIn} />
+              <Route exact path='/signInBuyer' component={SignInBuyer} />
+              <Route exact path='/signInEducator' component={SignInEducator} />
               <Route exact path='/products/:id' component={Details} />
               <Route exact path='/cart' component={Cart} />
               {/* <Route exact path='/register' component={Register} /> */}
