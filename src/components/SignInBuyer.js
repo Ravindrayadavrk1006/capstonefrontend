@@ -15,7 +15,23 @@ export default function Login(props) {
 
   function handleSubmit(event) {
     event.preventDefault()
-    console.log(email, password)
+    // console.log(email, password)
+      var values = { email: email, password: password }
+      console.log('printing the values', values)
+      fetch('/user/buyer/signIn', {
+        method: 'POST',
+        body: JSON.stringify(values), // The data
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      })
+        .then((response) => {
+          console.log('response returned from the server')
+          console.log(response.json())
+        })
+        .catch((err) => {
+          console.log(err)
+        })
   }
 
   return (

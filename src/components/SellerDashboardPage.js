@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 // import '../BaseAssets/sellerDashboardPage.css';
 import Main from './SellerDashboard/dashboardComponents/main/Main'
 import Navbar from './SellerDashboard/dashboardComponents/navbar/Navbar'
@@ -11,6 +11,16 @@ const SellerDashboardPage = () => {
   const closeSidebar = () => {
     setsidebarOpen(false)
   }
+  useEffect(() => {
+    fetch('/user/seller/dashboard')
+      .then((response) => {
+        var data = response.json()
+        console.log(data)
+      })
+      .catch((err) => {
+        console.log('err', err)
+      })
+  }, [])
   return (
     <section>
       {/* <div className='containerDashboard'> */}
@@ -34,13 +44,13 @@ const SellerDashboardPage = () => {
         className='BasecontainerDashboard'
       >
         <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
-        <div  className="dashboardContent">
+        <div className='dashboardContent'>
           <div
             style={{
               display: 'flex',
               flexDirection: 'row-reverse',
               width: '100vw',
-              marginBottom:'-2.9vh'
+              marginBottom: '-2.9vh',
             }}
             className='dashboardDivision'
           >
@@ -54,4 +64,4 @@ const SellerDashboardPage = () => {
   )
 }
 
-export default SellerDashboardPage;
+export default SellerDashboardPage

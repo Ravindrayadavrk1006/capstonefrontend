@@ -12,7 +12,7 @@ const useForm = (validate) => {
   // setUrl(sentUrl)
   const [errors, setErrors] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false)
-
+  const [signUpSuccessfull,setSignUpSuccessful]=useState('false');
   const handleInput = (event) => {
     const { name, value } = event.target
     setValues({
@@ -44,6 +44,8 @@ const useForm = (validate) => {
     })
       .then((response) => {
         console.log(response.json())
+        setSignUpSuccessful(true)
+        console.log("value of signUp succesfull",signUpSuccessfull);
       })
       .catch((err) => {
         console.log(err)
@@ -55,6 +57,7 @@ const useForm = (validate) => {
     values,
     errors,
     isSubmitting,
+    signUpSuccessfull
   }
 }
 

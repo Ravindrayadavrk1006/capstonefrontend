@@ -5,10 +5,15 @@ import validate from './Validation'
 import FormSuccess from './FormSuccess'
 
 export default function RegisterBuyer() {
-  const { handleInput, handleSubmit, values, errors, isSubmitting } = useForm(
-    validate
-  )
-
+  const {
+    handleInput,
+    handleSubmit,
+    values,
+    errors,
+    isSubmitting,
+    signUpSuccessfull,
+  } = useForm(validate)
+  console.log(signUpSuccessfull);
   return (
     <section>
       {Object.keys(errors).length === 0 && isSubmitting ? (
@@ -125,6 +130,9 @@ export default function RegisterBuyer() {
                 Submit
               </button>
               <br />
+              <div className="sigUpSuccessfullMessage">
+                {!signUpSuccessfull?<p style={{color:'green'}}>You have successfully registered you can log in</p>:''}
+              </div>
               <small>
                 Already have an account? Login{' '}
                 <Link to='/signInBuyer'>
