@@ -13,9 +13,9 @@ const AddProduct = () => {
     category: [],
   })
   const data = [
-    { label: 'pottery', value: 1 },
-    { label: 'handpainting', value: 1 },
-    { label: 'handicrafts', value: 1 },
+    { label: 'pottery' },
+    { label: 'handpainting' },
+    { label: 'handicrafts' },
     { label: 'others', value: 4 },
   ]
   const [options] = useState(data)
@@ -26,6 +26,7 @@ const AddProduct = () => {
   const [img3, setImg3] = useState('')
   const [img4, setImg4] = useState('')
   const [descImageUrl, setdescImageUrl] = useState([])
+  // const [sendSuccessFull,setsendSuccessfull]=useState(false)
   //  const [errors, setErrors] = useState({})
   //  const [isSubmitting, setIsSubmitting] = useState(false)
 
@@ -37,16 +38,61 @@ const AddProduct = () => {
       [name]: value,
     })
   }
+  const tempFunction=async()=>{
 
+    await setdescImageUrl([img1, img2, img3, img4])
+    await selected.map((val) => {
+      setCategory((cat) => [...cat, val.label])
+      return 0
+    })
+
+  }
   const handleSubmit = (event) => {
     event.preventDefault()
+    // selected.map((val) => {
+    //   setCategory((cat) => [...cat, val.label])
+    //   return 0;
+    // })
+    // if(img1 && img2 && img3)
+    // {
+    //   setdescImageUrl([img1, img2, img3, img4])
+    // }
+    setdescImageUrl([img1, img2, img3, img4])
+    console.log(descImageUrl,"value of descImageUrl");
     selected.map((val) => {
       setCategory((cat) => [...cat, val.label])
+      return 0
     })
-    setdescImageUrl([img1, img2, img3, img4])
-    console.log(values)
-    console.log(category)
-    console.log(descImageUrl)
+    setTimeout(()=>{
+      const { name, price, description, highlights, imageUrl } = values
+      var datatoSend = {
+        name,
+        price,
+        description,
+        highlights,
+        imageUrl,
+        category,
+        descImageUrl,
+      }
+      console.log(datatoSend)
+      fetch('/user/seller/dashboard/addItem', {
+        method: 'POST',
+        body: JSON.stringify(datatoSend), // The data
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      })
+        .then((response) => {
+          console.log('response returned from the server')
+          console.log(response.status);
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    },4000)  
+    // console.log(category)
+    // console.log(descImageUrl)
+   
   }
 
   return (
@@ -71,8 +117,8 @@ const AddProduct = () => {
             value={values.name}
           />
         </div>
-        <div class='form-group'>
-          <label Htmlfor='mainImage'>Main Image</label>
+        <div className='form-group'>
+          <label htmlFor='mainImage'>Main Image</label>
           <input
             className='form-control'
             type='text'
@@ -167,8 +213,8 @@ const AddProduct = () => {
            value={values.specifications}
          ></textarea>
        </div> */}
-        <div class='form-group'>
-          <label Htmlfor='descriptionImages'>Description images</label>
+        <div className='form-group'>
+          <label htmlFor='descriptionImages'>Description images</label>
           <input
             className='form-control'
             type='text'
@@ -192,7 +238,7 @@ const AddProduct = () => {
           <input
             className='form-control'
             type='text'
-            id='descImageUrl'
+            name='descImageUrl'
             id='name'
             onChange={(e) => {
               setImg3(e.target.value)

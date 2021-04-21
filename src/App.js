@@ -19,6 +19,7 @@ import SignInBuyer from './components/SignInBuyer'
 import SignInEducator from './components/SignInEducator'
 import SellerDashboard from './components/SellerDashboardPage';
 import AddProduct from './components/addProduct/AddProduct';
+import UpdateProfile from './components/UpdateProfile';
 function App() {
   const [search, setSearch] = useState('')
 
@@ -47,6 +48,7 @@ function App() {
                 component={BaseSignUpSignInPage}
               />
               <Route exact path='/registerBuyer' component={RegisterBuyer} />
+              <Route exact path='/updateProfile' component={UpdateProfile} />
               <Route exact path='/registerSeller' component={RegisterSeller} />
               <Route
                 exact

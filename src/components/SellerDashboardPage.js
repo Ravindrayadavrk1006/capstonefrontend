@@ -15,7 +15,6 @@ const SellerDashboardPage = () => {
     fetch('/user/seller/dashboard')
       .then((response) => {
         var data = response.json()
-        console.log(data)
       })
       .catch((err) => {
         console.log('err', err)
